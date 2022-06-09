@@ -432,68 +432,116 @@ body {
           }
         }
       }
-      .card-container {
-        display: flex;
-        width: 80%;
-        align-items: center;
-        justify-content: space-between;
-        position: absolute;
-        bottom: -70px;
+    }
+  }
+  & > .section-2 {
+    width: 100%;
+    background-color: $white-1;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
 
-        .card {
-          background: $white-1;
-          padding: 20px;
-          width: 240px;
-          border-radius: 10px;
+    .card-container {
+      display: flex;
+      width: 80rem;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      flex-wrap: wrap;
+      gap: 20px;
+
+      .card {
+        background-image: linear-gradient(
+          rgb(255, 255, 255),
+          rgb(255, 255, 255)
+        );
+        padding: 20px;
+        min-width: 240px;
+        width: 240px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        cursor: pointer;
+        gap: 18px;
+        box-shadow: 0.75rem 1.5rem 4rem 0rem #67718533;
+
+        &:hover {
+          background-image: linear-gradient(
+            rgb(255, 255, 255),
+            rgb(240, 242, 247)
+          );
+        }
+
+        .top {
+          width: 100%;
           display: flex;
           align-items: center;
-          justify-content: center;
-          flex-direction: column;
-          cursor: pointer;
-          gap: 20px;
+          justify-content: space-between;
 
-          .top {
-            width: 100%;
+          & > img {
+            width: 40px;
+            height: 40px;
+          }
+
+          & > span {
             display: flex;
-            align-items: center;
-            justify-content: space-between;
+            height: 100%;
+            gap: 6px;
 
-            & > span {
-              display: flex;
-              height: 100%;
-              gap: 6px;
+            & > div {
+              padding: 4px 8px;
+              font-weight: 500;
+              font-size: 14px;
+              border-radius: 5px;
+              transition: 0.15s;
+              cursor: pointer;
 
-              & > div {
-                padding: 2px 8px;
-                font-weight: 500;
-                font-size: 14px;
-                border-radius: 5px;
-                transition: 0.15s;
-                cursor: pointer;
+              &:nth-of-type(1) {
+                background: #efecfe;
+                color: rgb(83, 34, 229);
 
-                &:nth-of-type(1) {
-                  background: #efecfe;
-                  color: rgb(83, 34, 229);
-
-                  &:hover {
-                    background: rgb(222, 216, 253);
-                  }
+                &:hover {
+                  background: rgb(222, 216, 253);
                 }
-                &:nth-of-type(2) {
-                  background-color: #e6faec;
-                  color: rgb(0, 153, 76);
+              }
+              &:nth-of-type(2) {
+                background-color: #e6faec;
+                color: rgb(0, 153, 76);
 
-                  &:hover {
-                    background-color: rgb(230, 250, 236);
-                  }
+                &:hover {
+                  background-color: rgb(230, 250, 236);
                 }
               }
             }
           }
-          .bottom {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
+        }
+        .bottom {
+          color: rgb(18, 29, 51);
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          gap: 6px;
+          font-weight: 500;
+
+          & span {
+            &:nth-of-type(1) {
+              & > strong {
+                color: rgb(103, 113, 133);
+                font-weight: 500;
+                margin-left: 2px;
+              }
+            }
+            &:nth-of-type(2) {
+              & > strong {
+                color: rgb(255, 68, 58);
+                font-weight: 500;
+                margin-left: 2px;
+              }
+            }
           }
         }
       }

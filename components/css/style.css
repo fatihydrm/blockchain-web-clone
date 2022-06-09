@@ -452,18 +452,30 @@ body {
   background-color: #dfe3eb;
 }
 
-.container > .section-1 .section-1-inner .card-container {
+.container > .section-2 {
+  width: 100%;
+  background-color: #ffffff;
+  position: relative;
   display: flex;
-  width: 80%;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  position: absolute;
-  bottom: -70px;
+  background-color: blue;
 }
 
-.container > .section-1 .section-1-inner .card-container .card {
-  background: #ffffff;
+.container > .section-2 .card-container {
+  display: flex;
+  width: 80rem;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.container > .section-2 .card-container .card {
+  background-image: linear-gradient(white, white);
   padding: 20px;
+  min-width: 240px;
   width: 240px;
   border-radius: 10px;
   display: flex;
@@ -471,24 +483,34 @@ body {
   justify-content: center;
   flex-direction: column;
   cursor: pointer;
-  gap: 20px;
+  gap: 18px;
+  box-shadow: 0.75rem 1.5rem 4rem 0rem #67718533;
 }
 
-.container > .section-1 .section-1-inner .card-container .card .top {
+.container > .section-2 .card-container .card:hover {
+  background-image: linear-gradient(white, #f0f2f7);
+}
+
+.container > .section-2 .card-container .card .top {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.container > .section-1 .section-1-inner .card-container .card .top > span {
+.container > .section-2 .card-container .card .top > img {
+  width: 40px;
+  height: 40px;
+}
+
+.container > .section-2 .card-container .card .top > span {
   display: flex;
   height: 100%;
   gap: 6px;
 }
 
-.container > .section-1 .section-1-inner .card-container .card .top > span > div {
-  padding: 2px 8px;
+.container > .section-2 .card-container .card .top > span > div {
+  padding: 4px 8px;
   font-weight: 500;
   font-size: 14px;
   border-radius: 5px;
@@ -496,28 +518,43 @@ body {
   cursor: pointer;
 }
 
-.container > .section-1 .section-1-inner .card-container .card .top > span > div:nth-of-type(1) {
+.container > .section-2 .card-container .card .top > span > div:nth-of-type(1) {
   background: #efecfe;
   color: #5322e5;
 }
 
-.container > .section-1 .section-1-inner .card-container .card .top > span > div:nth-of-type(1):hover {
+.container > .section-2 .card-container .card .top > span > div:nth-of-type(1):hover {
   background: #ded8fd;
 }
 
-.container > .section-1 .section-1-inner .card-container .card .top > span > div:nth-of-type(2) {
+.container > .section-2 .card-container .card .top > span > div:nth-of-type(2) {
   background-color: #e6faec;
   color: #00994c;
 }
 
-.container > .section-1 .section-1-inner .card-container .card .top > span > div:nth-of-type(2):hover {
+.container > .section-2 .card-container .card .top > span > div:nth-of-type(2):hover {
   background-color: #e6faec;
 }
 
-.container > .section-1 .section-1-inner .card-container .card .bottom {
+.container > .section-2 .card-container .card .bottom {
+  color: #121d33;
   display: flex;
   flex-direction: column;
   width: 100%;
+  gap: 6px;
+  font-weight: 500;
+}
+
+.container > .section-2 .card-container .card .bottom span:nth-of-type(1) > strong {
+  color: #677185;
+  font-weight: 500;
+  margin-left: 2px;
+}
+
+.container > .section-2 .card-container .card .bottom span:nth-of-type(2) > strong {
+  color: #ff443a;
+  font-weight: 500;
+  margin-left: 2px;
 }
 
 @media screen and (max-width: 1100px) {
