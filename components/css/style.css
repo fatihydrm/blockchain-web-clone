@@ -159,7 +159,7 @@ body {
   content: "";
   display: block;
   position: absolute;
-  width: 100%;
+  width: 100px;
   height: 80px;
   top: -50px;
 }
@@ -459,24 +459,29 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: blue;
+  flex-direction: column;
+  flex: 1;
+  padding: 80px;
+  gap: 30px;
 }
 
 .container > .section-2 .card-container {
   display: flex;
-  width: 80rem;
   align-items: center;
   justify-content: center;
-  position: absolute;
   flex-wrap: wrap;
+  overflow: auto;
   gap: 20px;
+  padding: 20px;
+  transform: translateY(-170px);
+  z-index: 999;
 }
 
 .container > .section-2 .card-container .card {
   background-image: linear-gradient(white, white);
   padding: 20px;
-  min-width: 240px;
-  width: 240px;
+  min-width: 200px;
+  flex: 1;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -484,7 +489,8 @@ body {
   flex-direction: column;
   cursor: pointer;
   gap: 18px;
-  box-shadow: 0.75rem 1.5rem 4rem 0rem #67718533;
+  max-width: 400px;
+  box-shadow: 0 6px 15px 2px rgba(0, 0, 0, 0.1);
 }
 
 .container > .section-2 .card-container .card:hover {
@@ -557,12 +563,183 @@ body {
   margin-left: 2px;
 }
 
+.container > .section-2 .big-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 80px;
+  width: 100%;
+  max-width: 80rem;
+  transform: translateY(-170px);
+  overflow: hidden;
+}
+
+.container > .section-2 .big-card-container ul {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  padding-right: 100px;
+  gap: 10px;
+  width: 100%;
+}
+
+.container > .section-2 .big-card-container ul li {
+  border: 1px solid #ded8fd;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  transition: 0.5s;
+}
+
+.container > .section-2 .big-card-container ul li .text-1 {
+  font-weight: 500;
+}
+
+.container > .section-2 .big-card-container ul li .text-2 {
+  opacity: 0;
+  display: none;
+}
+
+.container > .section-2 .big-card-container ul li.active {
+  background: #efecfe;
+  transition: 0.3s;
+}
+
+.container > .section-2 .big-card-container ul li.active .text-2 {
+  display: block;
+  opacity: 1;
+}
+
+.container > .section-2 .big-card-container .big-card {
+  width: 100%;
+  height: 840px;
+  border-radius: 20px;
+  display: flex;
+}
+
+.container > .section-2 .big-card-container .big-card .left,
+.container > .section-2 .big-card-container .big-card .right {
+  height: 100%;
+  flex: 1;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(1) {
+  background: #f7f5fe;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(1) .left {
+  color: #7349f2;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: 60px;
+  padding-left: 120px;
+  gap: 20px;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(1) .left > .top-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #efecfe;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 16px;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(1) .left > .top-btn svg {
+  width: 40px;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(1) .left h1 {
+  font-size: 42px;
+  font-weight: 500;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(1) .left .bottom-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #7349f2;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 14px 20px;
+  cursor: pointer;
+  color: #ffffff;
+  transition: 0.3s;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(1) .left .bottom-btn:hover {
+  background-color: #5322e5;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(1) .right {
+  background-image: url("https://www.blockchain.com/static/img/home/home-wallet-shapes-bg.png");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(1) .right > img {
+  height: 600px;
+  position: absolute;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(1) .right > img.active {
+  opacity: 1;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(2) {
+  background: #f5fafe;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(2) .right {
+  color: #3d89f5;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(3) {
+  background: #f0f2f7;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(3) .left {
+  color: #677185;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(4) {
+  background: #fff8f2;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(4) .left {
+  color: #f28b24;
+}
+
 @media screen and (max-width: 1100px) {
   body .container > .navbar .navbar-inner .left .menu-list {
     display: none;
   }
   body .container .section-1 .section-1-inner {
     padding: 180px 40px;
+  }
+  body .container .section-2 {
+    padding: 40px;
+  }
+  body .container .section-2 .card-container {
+    padding: 20px 0;
   }
 }
 
