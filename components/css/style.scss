@@ -562,7 +562,6 @@ body {
       max-width: 80rem;
       transform: translateY(-170px);
       overflow: hidden;
-
       ul {
         display: flex;
         flex-direction: column;
@@ -612,49 +611,75 @@ body {
           height: 100%;
           flex: 1;
         }
+        .left {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          padding-top: 60px;
+          padding-left: 120px;
+          gap: 20px;
+          h1 {
+            font-size: 42px;
+            font-weight: 500;
+          }
 
+          .top-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            font-weight: 500;
+            font-size: 18px;
+            padding: 16px;
+            color: inherit;
+            svg {
+              width: 40px;
+            }
+          }
+          .bottom-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 8px;
+            font-weight: 500;
+            font-size: 18px;
+            padding: 14px 20px;
+            cursor: pointer;
+            color: $white-1;
+            transition: 0.3s;
+          }
+        }
+        .right {
+          background-position: center;
+          background-size: 100%;
+          background-repeat: no-repeat;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          position: relative;
+
+          & > img {
+            height: 600px;
+            position: absolute;
+            opacity: 0;
+            transition: 0.3s;
+
+            &.active {
+              opacity: 1;
+            }
+          }
+        }
         &:nth-of-type(1) {
           background: #f7f5fe;
 
           .left {
             color: rgb(115, 73, 242);
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            padding-top: 60px;
-            padding-left: 120px;
-            gap: 20px;
 
-            & > .top-btn {
-              display: flex;
-              justify-content: center;
-              align-items: center;
+            .top-btn {
               background: #efecfe;
-              border-radius: 20px;
-              font-weight: 500;
-              font-size: 18px;
-              padding: 16px;
-
-              svg {
-                width: 40px;
-              }
-            }
-            h1 {
-              font-size: 42px;
-              font-weight: 500;
             }
             .bottom-btn {
-              display: flex;
-              justify-content: center;
-              align-items: center;
               background: rgb(115, 73, 242);
-              border-radius: 8px;
-              font-weight: 500;
-              font-size: 18px;
-              padding: 14px 20px;
-              cursor: pointer;
-              color: $white-1;
-              transition: 0.3s;
 
               &:hover {
                 background-color: rgb(83, 34, 229);
@@ -663,38 +688,55 @@ body {
           }
           .right {
             background-image: url("https://www.blockchain.com/static/img/home/home-wallet-shapes-bg.png");
-            background-position: center;
-            background-size: 100%;
-            background-repeat: no-repeat;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            position: relative;
-
-            & > img {
-              height: 600px;
-              position: absolute;
-              opacity: 0;
-              transition: 0.3s;
-
-              &.active {
-                opacity: 1;
-              }
-            }
           }
         }
         &:nth-of-type(2) {
           background: #f5fafe;
+          flex-direction: row-reverse;
 
-          .right {
+          .left {
             color: rgb(61, 137, 245);
+
+            .top-btn {
+              background-color: rgb(236, 245, 254);
+              color: rgb(61, 137, 245);
+            }
+            .bottom-btn {
+              background-color: rgb(12, 108, 242);
+
+              &:hover {
+                background-color: rgb(20, 70, 153);
+              }
+            }
+          }
+          .right {
+            background-image: url("https://www.blockchain.com/static/img/home/home-exchange-shapes-bg.png");
+            justify-content: flex-end;
           }
         }
         &:nth-of-type(3) {
           background: #f0f2f7;
 
           .left {
-            color: rgb(103, 113, 133);
+            color: #121d33;
+
+            .top-btn {
+              background: #dfe3eb;
+            }
+            .bottom-btn {
+              color: rgb(255, 255, 255);
+              background: rgb(103, 113, 133);
+
+              &:hover {
+                background-color: rgb(80, 89, 107);
+              }
+            }
+            p {
+              width: 500px;
+            }
+          }
+          .right {
+            background-image: url("https://www.blockchain.com/static/img/home/home-institutional-shapes-bg.png");
           }
         }
         &:nth-of-type(4) {

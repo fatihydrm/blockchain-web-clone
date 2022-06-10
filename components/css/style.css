@@ -630,12 +630,7 @@ body {
   flex: 1;
 }
 
-.container > .section-2 .big-card-container .big-card:nth-of-type(1) {
-  background: #f7f5fe;
-}
-
-.container > .section-2 .big-card-container .big-card:nth-of-type(1) .left {
-  color: #7349f2;
+.container > .section-2 .big-card-container .big-card .left {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -644,31 +639,30 @@ body {
   gap: 20px;
 }
 
-.container > .section-2 .big-card-container .big-card:nth-of-type(1) .left > .top-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #efecfe;
-  border-radius: 20px;
-  font-weight: 500;
-  font-size: 18px;
-  padding: 16px;
-}
-
-.container > .section-2 .big-card-container .big-card:nth-of-type(1) .left > .top-btn svg {
-  width: 40px;
-}
-
-.container > .section-2 .big-card-container .big-card:nth-of-type(1) .left h1 {
+.container > .section-2 .big-card-container .big-card .left h1 {
   font-size: 42px;
   font-weight: 500;
 }
 
-.container > .section-2 .big-card-container .big-card:nth-of-type(1) .left .bottom-btn {
+.container > .section-2 .big-card-container .big-card .left .top-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #7349f2;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 16px;
+  color: inherit;
+}
+
+.container > .section-2 .big-card-container .big-card .left .top-btn svg {
+  width: 40px;
+}
+
+.container > .section-2 .big-card-container .big-card .left .bottom-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 8px;
   font-weight: 500;
   font-size: 18px;
@@ -678,12 +672,7 @@ body {
   transition: 0.3s;
 }
 
-.container > .section-2 .big-card-container .big-card:nth-of-type(1) .left .bottom-btn:hover {
-  background-color: #5322e5;
-}
-
-.container > .section-2 .big-card-container .big-card:nth-of-type(1) .right {
-  background-image: url("https://www.blockchain.com/static/img/home/home-wallet-shapes-bg.png");
+.container > .section-2 .big-card-container .big-card .right {
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -693,23 +682,66 @@ body {
   position: relative;
 }
 
-.container > .section-2 .big-card-container .big-card:nth-of-type(1) .right > img {
+.container > .section-2 .big-card-container .big-card .right > img {
   height: 600px;
   position: absolute;
   opacity: 0;
   transition: 0.3s;
 }
 
-.container > .section-2 .big-card-container .big-card:nth-of-type(1) .right > img.active {
+.container > .section-2 .big-card-container .big-card .right > img.active {
   opacity: 1;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(1) {
+  background: #f7f5fe;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(1) .left {
+  color: #7349f2;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(1) .left .top-btn {
+  background: #efecfe;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(1) .left .bottom-btn {
+  background: #7349f2;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(1) .left .bottom-btn:hover {
+  background-color: #5322e5;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(1) .right {
+  background-image: url("https://www.blockchain.com/static/img/home/home-wallet-shapes-bg.png");
 }
 
 .container > .section-2 .big-card-container .big-card:nth-of-type(2) {
   background: #f5fafe;
+  flex-direction: row-reverse;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(2) .left {
+  color: #3d89f5;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(2) .left .top-btn {
+  background-color: #ecf5fe;
+  color: #3d89f5;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(2) .left .bottom-btn {
+  background-color: #0c6cf2;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(2) .left .bottom-btn:hover {
+  background-color: #144699;
 }
 
 .container > .section-2 .big-card-container .big-card:nth-of-type(2) .right {
-  color: #3d89f5;
+  background-image: url("https://www.blockchain.com/static/img/home/home-exchange-shapes-bg.png");
+  justify-content: flex-end;
 }
 
 .container > .section-2 .big-card-container .big-card:nth-of-type(3) {
@@ -717,7 +749,28 @@ body {
 }
 
 .container > .section-2 .big-card-container .big-card:nth-of-type(3) .left {
-  color: #677185;
+  color: #121d33;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(3) .left .top-btn {
+  background: #dfe3eb;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(3) .left .bottom-btn {
+  color: white;
+  background: #677185;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(3) .left .bottom-btn:hover {
+  background-color: #50596b;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(3) .left p {
+  width: 500px;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(3) .right {
+  background-image: url("https://www.blockchain.com/static/img/home/home-institutional-shapes-bg.png");
 }
 
 .container > .section-2 .big-card-container .big-card:nth-of-type(4) {
