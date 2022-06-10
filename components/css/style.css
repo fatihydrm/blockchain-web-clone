@@ -619,9 +619,10 @@ body {
 
 .container > .section-2 .big-card-container .big-card {
   width: 100%;
-  height: 840px;
   border-radius: 20px;
   display: flex;
+  padding-bottom: 50px;
+  position: relative;
 }
 
 .container > .section-2 .big-card-container .big-card .left,
@@ -739,6 +740,15 @@ body {
   background-color: #144699;
 }
 
+.container > .section-2 .big-card-container .big-card:nth-of-type(2) .left ul li {
+  border-color: #d8ebfd;
+  background-color: #f5fafe;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(2) .left ul li.active {
+  background-color: #ecf5fe;
+}
+
 .container > .section-2 .big-card-container .big-card:nth-of-type(2) .right {
   background-image: url("https://www.blockchain.com/static/img/home/home-exchange-shapes-bg.png");
   justify-content: flex-end;
@@ -781,6 +791,31 @@ body {
   color: #f28b24;
 }
 
+.container > .section-2 .big-card-container .big-card:nth-of-type(4) .left ul li {
+  border-color: #fae4cd;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(4) .left ul li.active {
+  background-color: #fff2e5;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(4) .left .top-btn {
+  background-color: #fff2e5;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(4) .left .bottom-btn {
+  color: #ffffff;
+  background: #f28b24;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(4) .left .bottom-btn:hover {
+  background-color: #d96716;
+}
+
+.container > .section-2 .big-card-container .big-card:nth-of-type(4) .right {
+  background-image: url("https://www.blockchain.com/static/img/home/home-explorer-shapes-bg.png");
+}
+
 @media screen and (max-width: 1100px) {
   body .container > .navbar .navbar-inner .left .menu-list {
     display: none;
@@ -789,10 +824,36 @@ body {
     padding: 180px 40px;
   }
   body .container .section-2 {
-    padding: 40px;
+    padding: 20px;
   }
   body .container .section-2 .card-container {
     padding: 20px 0;
+  }
+  body .container .section-2 .big-card-container .big-card {
+    padding: 0;
+  }
+  body .container .section-2 .big-card-container .big-card .right {
+    flex: 0.5;
+    background-size: cover;
+    background-position: 90%;
+  }
+  body .container .section-2 .big-card-container .big-card .right img {
+    display: none;
+  }
+  body .container .section-2 .big-card-container .big-card .left {
+    padding: 40px;
+    z-index: 2;
+  }
+  body .container .section-2 .big-card-container .big-card ul {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  body .container > .navbar .navbar-inner .right .login-btn,
+  body .container > .navbar .navbar-inner .right .register-btn,
+  body .container > .navbar .navbar-inner .right .search-btn {
+    display: none;
   }
 }
 
