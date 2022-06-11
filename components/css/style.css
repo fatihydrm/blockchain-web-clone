@@ -714,6 +714,10 @@ body {
   background-color: #5322e5;
 }
 
+.container > .section-2 .big-card-container .big-card:nth-of-type(1) .left ul li {
+  background-color: #f7f5ff;
+}
+
 .container > .section-2 .big-card-container .big-card:nth-of-type(1) .right {
   background-image: url("https://www.blockchain.com/static/img/home/home-wallet-shapes-bg.png");
 }
@@ -793,6 +797,7 @@ body {
 
 .container > .section-2 .big-card-container .big-card:nth-of-type(4) .left ul li {
   border-color: #fae4cd;
+  background-color: #fff8f2;
 }
 
 .container > .section-2 .big-card-container .big-card:nth-of-type(4) .left ul li.active {
@@ -828,14 +833,22 @@ body {
   }
   body .container .section-2 .card-container {
     padding: 20px 0;
+    transform: translateY(-90px);
+  }
+  body .container .section-2 .big-card-container {
+    transform: translateY(-90px);
   }
   body .container .section-2 .big-card-container .big-card {
     padding: 0;
   }
   body .container .section-2 .big-card-container .big-card .right {
-    flex: 0.5;
-    background-size: cover;
-    background-position: 90%;
+    background-size: 50%;
+    background-position: right center;
+    backdrop-filter: opacity(0);
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
   }
   body .container .section-2 .big-card-container .big-card .right img {
     display: none;
@@ -843,25 +856,20 @@ body {
   body .container .section-2 .big-card-container .big-card .left {
     padding: 40px;
     z-index: 2;
+    margin-right: 40%;
   }
   body .container .section-2 .big-card-container .big-card ul {
     padding: 0;
   }
-}
-
-@media screen and (max-width: 740px) {
-  body .container > .navbar .navbar-inner .right .login-btn,
-  body .container > .navbar .navbar-inner .right .register-btn,
-  body .container > .navbar .navbar-inner .right .search-btn {
-    display: none;
+  body .container .section-2 .big-card-container .big-card:nth-of-type(2) {
+    justify-content: flex-end;
   }
-}
-
-@media screen and (max-width: 620px) {
-  body .container > .navbar .navbar-inner .right .login-btn,
-  body .container > .navbar .navbar-inner .right .register-btn,
-  body .container > .navbar .navbar-inner .right .search-btn {
-    display: none;
+  body .container .section-2 .big-card-container .big-card:nth-of-type(2) .right {
+    background-position: left center;
+  }
+  body .container .section-2 .big-card-container .big-card:nth-of-type(2) .left {
+    margin-right: 0;
+    margin-left: 40%;
   }
 }
 
@@ -882,5 +890,55 @@ body {
   body .container .section-1 .section-1-inner .text-container .button button {
     flex: 1;
     padding: 8px 0;
+  }
+  body .container .section-2 .big-card-container .big-card .left {
+    width: 100%;
+    padding: 40px;
+    z-index: 2;
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+  }
+}
+
+@media screen and (max-width: 740px) {
+  body .container .section-2 {
+    padding: 20px;
+  }
+  body .container .section-2 .card-container {
+    padding: 20px 0;
+  }
+  body .container .section-2 .big-card-container .big-card {
+    padding: 0;
+  }
+  body .container .section-2 .big-card-container .big-card .right {
+    position: absolute;
+    background-size: 50%;
+    background-position: right center;
+    backdrop-filter: opacity(0);
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.5;
+  }
+  body .container .section-2 .big-card-container .big-card .right img {
+    display: none;
+  }
+  body .container .section-2 .big-card-container .big-card .left {
+    padding: 40px;
+    z-index: 1;
+  }
+  body .container .section-2 .big-card-container .big-card .left ul {
+    display: none;
+  }
+  body .container .section-2 .big-card-container .big-card ul {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  body .container > .navbar .navbar-inner .right .login-btn,
+  body .container > .navbar .navbar-inner .right .register-btn,
+  body .container > .navbar .navbar-inner .right .search-btn {
+    display: none;
   }
 }

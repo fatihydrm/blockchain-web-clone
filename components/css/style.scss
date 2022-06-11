@@ -686,6 +686,9 @@ body {
                 background-color: rgb(83, 34, 229);
               }
             }
+            ul li {
+              background-color: #f7f5ff;
+            }
           }
           .right {
             background-image: url("https://www.blockchain.com/static/img/home/home-wallet-shapes-bg.png");
@@ -711,7 +714,7 @@ body {
             }
             ul li {
               border-color: rgb(216, 235, 253);
-              background-color: rgb(245, 250, 254);
+              background-color: #f5fafe;
 
               &.active {
                 background-color: rgb(236, 245, 254);
@@ -755,6 +758,7 @@ body {
 
             ul li {
               border-color: rgb(250, 228, 205);
+              background-color: #fff8f2;
 
               &.active {
                 background-color: rgb(255, 242, 229);
@@ -780,7 +784,6 @@ body {
     }
   }
 }
-
 @media screen and (max-width: 1100px) {
   body {
     .container {
@@ -803,14 +806,20 @@ body {
 
         .card-container {
           padding: 20px 0;
+          transform: translateY(-90px);
         }
         .big-card-container {
+          transform: translateY(-90px);
           .big-card {
             padding: 0;
             .right {
-              flex: 0.5;
-              background-size: cover;
-              background-position: 90%;
+              background-size: 50%;
+              background-position: right center;
+              backdrop-filter: opacity(0);
+              z-index: 0;
+              position: absolute;
+              width: 100%;
+              height: 100%;
               img {
                 display: none;
               }
@@ -818,43 +827,20 @@ body {
             .left {
               padding: 40px;
               z-index: 2;
+              margin-right: 40%;
             }
             ul {
               padding: 0;
             }
-          }
-        }
-      }
-    }
-  }
-}
-@media screen and (max-width: 740px) {
-  body {
-    .container {
-      & > .navbar {
-        .navbar-inner {
-          .right {
-            .login-btn,
-            .register-btn,
-            .search-btn {
-              display: none;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-@media screen and (max-width: 620px) {
-  body {
-    .container {
-      & > .navbar {
-        .navbar-inner {
-          .right {
-            .login-btn,
-            .register-btn,
-            .search-btn {
-              display: none;
+            &:nth-of-type(2) {
+              justify-content: flex-end;
+              .right {
+                background-position: left center;
+              }
+              .left {
+                margin-right: 0;
+                margin-left: 40%;
+              }
             }
           }
         }
@@ -883,6 +869,78 @@ body {
                 flex: 1;
                 padding: 8px 0;
               }
+            }
+          }
+        }
+      }
+      .section-2 {
+        .big-card-container {
+          .big-card {
+            .left {
+              width: 100%;
+              padding: 40px;
+              z-index: 2;
+              margin-right: 0 !important;
+              margin-left: 0 !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 740px) {
+  body {
+    .container {
+      .section-2 {
+        padding: 20px;
+
+        .card-container {
+          padding: 20px 0;
+        }
+        .big-card-container {
+          .big-card {
+            padding: 0;
+            .right {
+              position: absolute;
+              background-size: 50%;
+              background-position: right center;
+              backdrop-filter: opacity(0);
+              width: 100%;
+              height: 100%;
+              z-index: 0;
+              opacity: 0.5;
+              img {
+                display: none;
+              }
+            }
+            .left {
+              padding: 40px;
+              z-index: 1;
+
+              ul {
+                display: none;
+              }
+            }
+            ul {
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 620px) {
+  body {
+    .container {
+      & > .navbar {
+        .navbar-inner {
+          .right {
+            .login-btn,
+            .register-btn,
+            .search-btn {
+              display: none;
             }
           }
         }
