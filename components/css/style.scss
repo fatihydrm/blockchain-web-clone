@@ -455,7 +455,7 @@ body {
       gap: 20px;
       padding: 20px;
       transform: translateY(-170px);
-      z-index: 999;
+      z-index: 99;
 
       .card {
         background-image: linear-gradient(
@@ -463,7 +463,7 @@ body {
           rgb(255, 255, 255)
         );
         padding: 20px;
-        min-width: 200px;
+        min-width: 240px;
         flex: 1;
         border-radius: 10px;
         display: flex;
@@ -559,7 +559,7 @@ body {
       gap: 80px;
       width: 100%;
       max-width: 80rem;
-      transform: translateY(-170px);
+      transform: translateY(-120px);
       overflow: hidden;
       ul {
         display: flex;
@@ -595,6 +595,107 @@ body {
             .text-2 {
               display: block;
               opacity: 1;
+            }
+          }
+        }
+      }
+      .slider-container {
+        width: 100%;
+        display: none;
+        align-items: center;
+        justify-content: center;
+        height: 460px;
+        flex-direction: column;
+        position: relative;
+
+        .slider-inner {
+          display: flex;
+          width: 100%;
+          flex: 1;
+          flex-direction: column;
+
+          .img {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            position: relative;
+            transition: 0.3s ease-out;
+            padding: 40px;
+            gap: 80px;
+
+            .img-inner {
+              min-width: 100%;
+              height: 100%;
+              background-position: center;
+              background-size: contain;
+              background-repeat: no-repeat;
+            }
+          }
+          .text {
+            height: 50px;
+            width: 100%;
+            display: flex;
+            overflow: hidden;
+
+            .text-inner {
+              width: 100%;
+              height: 100%;
+              display: flex;
+              align-items: center;
+              transition: 0.3s ease-out;
+              p {
+                display: flex;
+                min-width: 100%;
+                height: 100%;
+                align-items: center;
+                justify-content: flex-start;
+                font-weight: 500;
+              }
+            }
+          }
+        }
+        .buttons {
+          width: 100%;
+          position: absolute;
+          bottom: 50px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .btn-container {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            button {
+              width: 44px;
+              height: 44px;
+              border-radius: 10px;
+              cursor: pointer;
+
+              i {
+                transition: 0.2s;
+                font-size: 16px;
+              }
+
+              &:hover {
+                i {
+                  opacity: 0.5;
+                }
+              }
+            }
+          }
+          .slider-wave {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            span {
+              height: 4px;
+              min-width: 20px;
+              border-radius: 4px;
+              cursor: pointer;
             }
           }
         }
@@ -695,6 +796,47 @@ body {
           .right {
             background-image: url("https://www.blockchain.com/static/img/home/home-wallet-shapes-bg.png");
           }
+          .slider-container {
+            .buttons {
+              .btn-container {
+                button {
+                  color: #7349f2;
+                  border: 1px solid #7349f2;
+                  background-color: #f7f5fe;
+                }
+              }
+            }
+            .slider-inner {
+              .img {
+                .img-inner {
+                  &:nth-of-type(1) {
+                    background-image: url("../img/big-card-1/1.png");
+                  }
+                  &:nth-of-type(2) {
+                    background-image: url("../img/big-card-1/2.png");
+                  }
+                  &:nth-of-type(3) {
+                    background-image: url("../img/big-card-1/3.png");
+                  }
+                  &:nth-of-type(4) {
+                    background-image: url("../img/big-card-1/4.png");
+                  }
+                  &:nth-of-type(5) {
+                    background-image: url("../img/big-card-1/5.png");
+                  }
+                }
+              }
+            }
+            .slider-wave {
+              span {
+                background-color: #ded8fd;
+
+                &.active {
+                  background-color: #7349f2;
+                }
+              }
+            }
+          }
         }
         &:nth-of-type(2) {
           background: #f5fafe;
@@ -722,6 +864,43 @@ body {
                 background-color: rgb(236, 245, 254);
               }
             }
+            .slider-container {
+              .buttons {
+                .btn-container {
+                  button {
+                    color: #0c6cf2;
+                    border: 1px solid #0c6cf2;
+                    background-color: #f5fafe;
+                  }
+                }
+              }
+              .slider-inner {
+                .img {
+                  .img-inner {
+                    &:nth-of-type(1) {
+                      background-image: url("../img/big-card-2/1.png");
+                    }
+                    &:nth-of-type(2) {
+                      background-image: url("../img/big-card-2/2.png");
+                    }
+                    &:nth-of-type(3) {
+                      background-image: url("../img/big-card-2/3.png");
+                    }
+                    &:nth-of-type(4) {
+                      background-image: url("../img/big-card-2/4.png");
+                    }
+                  }
+                }
+              }
+              .slider-wave {
+                span {
+                  background-color: #d8ebfd;
+                  &.active {
+                    background-color: #0c6cf2;
+                  }
+                }
+              }
+            }
           }
           .right {
             background-image: url("https://www.blockchain.com/static/img/home/home-exchange-shapes-bg.png");
@@ -733,6 +912,7 @@ body {
 
           .left {
             color: #121d33;
+            gap: 36px;
 
             .top-btn {
               background: #dfe3eb;
@@ -775,6 +955,43 @@ body {
 
               &:hover {
                 background-color: #d96716;
+              }
+            }
+            .slider-container {
+              .buttons {
+                .btn-container {
+                  button {
+                    color: #f28b24;
+                    border: 1px solid #f28b24;
+                    background-color: #fff8f2;
+                  }
+                }
+              }
+              .slider-inner {
+                .img {
+                  .img-inner {
+                    &:nth-of-type(1) {
+                      background-image: url("../img/big-card-3/1.png");
+                    }
+                    &:nth-of-type(2) {
+                      background-image: url("../img/big-card-3/2.png");
+                    }
+                    &:nth-of-type(3) {
+                      background-image: url("../img/big-card-3/3.png");
+                    }
+                    &:nth-of-type(4) {
+                      background-image: url("../img/big-card-3/4.png");
+                    }
+                  }
+                }
+              }
+              .slider-wave {
+                span {
+                  background-color: #fae4cd;
+                  &.active {
+                    background-color: #f28b24;
+                  }
+                }
               }
             }
           }
@@ -881,6 +1098,9 @@ body {
           padding: 20px 0;
         }
         .big-card-container {
+          .slider-container {
+            display: flex;
+          }
           .big-card {
             padding: 0;
             .right {
@@ -891,14 +1111,14 @@ body {
               width: 100%;
               height: 100%;
               z-index: 0;
-              opacity: 0.5;
+              opacity: 1;
               img {
                 display: none;
               }
             }
             .left {
               width: 100%;
-              padding: 40px;
+              padding: 20px;
               z-index: 1;
               margin-right: 0 !important;
               margin-left: 0 !important;
@@ -908,13 +1128,21 @@ body {
               h1 {
                 font-size: 20px;
               }
-              p {
+              & > p {
                 display: none;
               }
               .top-btn,
               .bottom-btn {
                 padding: 12px 16px;
                 font-size: 17px;
+              }
+            }
+            &#bigCard3 {
+              .left {
+                & > p {
+                  display: flex;
+                  width: auto;
+                }
               }
             }
           }
@@ -948,6 +1176,28 @@ body {
           .big-card {
             .left {
               padding: 16px;
+              .slider-container {
+                .slider-inner {
+                  .img {
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+                    transition: 0.3s ease-out;
+                    padding: 5px;
+                    gap: 10px;
+
+                    .img-inner {
+                      min-width: 100%;
+                      height: 100%;
+                      background-position: center;
+                      background-size: contain;
+                      background-repeat: no-repeat;
+                    }
+                  }
+                }
+              }
             }
           }
         }
