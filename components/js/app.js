@@ -313,16 +313,15 @@ imgNextBtn4.addEventListener("click", (e) => {
   }
 });
 
-window.addEventListener("scroll", () => {
-  window.scrollTo(0, 0);
-});
-
 let openPopup = document.querySelector("#openPopup");
 let closePopup = document.querySelector("#closePopup");
 let popupMenu = document.querySelector("#popupMenu");
 
 openPopup.onclick = () => {
   popupMenu.classList.add("active");
+  window.addEventListener("scroll", () => {
+    window.scrollTo(0, 0);
+  });
 };
 closePopup.onclick = () => {
   popupMenu.classList.remove("active");
