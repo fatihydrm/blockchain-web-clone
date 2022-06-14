@@ -317,12 +317,18 @@ let openPopup = document.querySelector("#openPopup");
 let closePopup = document.querySelector("#closePopup");
 let popupMenu = document.querySelector("#popupMenu");
 
+let body = document.body;
+
+let scrollOff = () => {
+  window.scrollTo(0, 0);
+};
+
 openPopup.onclick = () => {
   popupMenu.classList.add("active");
-  window.addEventListener("scroll", () => {
-    window.scrollTo(0, 0);
-  });
+  window.addEventListener("scroll", scrollOff);
 };
+
 closePopup.onclick = () => {
   popupMenu.classList.remove("active");
+  window.removeEventListener("scroll", scrollOff);
 };
